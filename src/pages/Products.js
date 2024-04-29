@@ -45,7 +45,7 @@ import Loading from "components/preloader/Loading";
 const Products = () => {
   const { title, allId, serviceId, handleDeleteMany, handleUpdateMany } =
     useToggleDrawer();
-  // const { data, loading } = useAsync(ProductServices.getAllProducts);
+  const { data, loading } = useAsync(ProductServices.getAllProducts);
   // const data = { products: productData }
   const { t } = useTranslation();
   const {
@@ -63,16 +63,16 @@ const Products = () => {
     // limitData,
     // totalResults,
   } = useContext(SidebarContext);
-  const { data, loading } = useAsync(() =>
-    ProductServices.getAllProducts({
-      page: currentPage,
-      limit: limitData,
-      category: category,
-      title: searchText,
-      price: sortedField,
-    })
-  );
-  console.log("hi:", data)
+  // const { data, loading } = useAsync(() =>
+  //   ProductServices.getAllProducts({
+  //     page: currentPage,
+  //     limit: limitData,
+  //     category: category,
+  //     title: searchText,
+  //     price: sortedField,
+  //   })
+  // );
+  // console.log("hi:", data)
   const {
     totalResults,
     resultsPerPage,

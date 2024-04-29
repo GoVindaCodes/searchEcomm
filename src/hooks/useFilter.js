@@ -385,10 +385,12 @@ const useFilter = (data) => {
   ]);
 
   //pagination functionality start
-  const resultsPerPage = 10;
+  // temporarily adding 50 to solve search issue for now
+  // const resultsPerPage = 10;
+  const resultsPerPage = 50;
   const totalResults = serviceData?.length;
   const handleChangePage = (p) => {
-    // console.log('Changing page to:', p);
+    console.log('Changing page to:', p);
     setCurrentPage(p);
   };
   useEffect(() => {
@@ -850,6 +852,7 @@ const useFilter = (data) => {
     totalResults,
     resultsPerPage,
     dataTable,
+    setDataTable,
     serviceData,
     handleSubmitUser,
     handleSubmitForAll,

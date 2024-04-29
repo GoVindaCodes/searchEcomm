@@ -30,7 +30,7 @@ const ProductTable = ({ products, isCheck, setIsCheck, currency, lang, globalSet
   const { title, serviceId, handleModalOpen, handleUpdate } = useToggleDrawer();
   // const { data, loading } = useAsync(ProductServices.getAllProducts);
   // const { data, loading } = useAsync(CurrencyServices.getShowingCurrency);
-
+  console.log("table sayss hi :", products)
   const handleClick = (e) => {
     const { id, checked } = e.target;
     console.log("id", id, checked);

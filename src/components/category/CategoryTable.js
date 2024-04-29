@@ -61,7 +61,7 @@ const CategoryTable = ({
   //   };
   //   fetchData();
   // }, []);
-
+  console.log("categories: ", categories)
   return (
     <>
       {isCheck?.length < 1 && (
